@@ -48,13 +48,13 @@
           </div>
           </nav>
 
-         <main id="membersApp" class="row">
+         <main class="row">
 
 
 
-                <div class="Members" v-for="member in members" v-on:click="activePt = pt">
-                  <span class="memberID">{{ member.memberID }}</span>,
-                  <span clas="firstName">{{ member.firstName }}</span>
+                <div id="membersApp" class="Members" v-on:click="activePt = pt">
+                  <span class="memberID">{{ memberList.memberID }}</span>,
+                  <span class="firstName">{{ member.firstName }}</span>
                   <span class="lastName float-right">{{ member.lastName }}</span>
                 </div>
 
@@ -71,10 +71,10 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr v-for="m in members">
-                          <td>{{ m.firstName }} {{ m.lastName }}</td>
+                        <tr>
+                          <td>{{ memberList.firstName }} {{ m.lastName }}</td>
                           <td>{{ m.position }}</td>
-                          <td>{{ m.radioNumber }}</td>
+                          <td>{{ memberList.radio_num }}</td>
                           <td>{{ m.stationNumber }}</td>
                           <td>{{ m.isActive }}</td>
 
@@ -97,21 +97,19 @@
                                <tr><td>Start Date</td><td>{{ member.startDate }}</td></tr>
                                <tr><td>Email</td><td>{{ member.emailAddress }}</td></tr>
                                <tr><td>Certification</td><td>
-                                 <ul v-for="c in memberCert">
+                                 <ul>
                                    <li>{{ c.certificationName }} | {{ c.renewedDate }}</li>
                                  </ul>
                              </table>
                            </div>
 
 </main>
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/members.app.js"></script>
 
-
-
-</body>
+  </body>
 </html>
