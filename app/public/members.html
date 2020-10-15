@@ -50,15 +50,8 @@
 
          <main class="row">
 
-
-
-                <div id="membersApp" class="Members" v-on:click="activePt = pt">
-                  <span class="memberID">{{ memberList.memberID }}</span>,
-                  <span class="firstName">{{ member.firstName }}</span>
-                  <span class="lastName float-right">{{ member.lastName }}</span>
-                </div>
-
                 <br>
+                <div id="membersApp">
                     <table align="center" class="table table-bordered table-hover table-striped text-center">
                       <thead>
                         <tr>
@@ -72,33 +65,18 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>{{ memberList.firstName }} {{ m.lastName }}</td>
-                          <td>{{ m.position }}</td>
-                          <td>{{ memberList.radio_num }}</td>
-                          <td>{{ m.stationNumber }}</td>
-                          <td>{{ m.isActive }}</td>
-
+                          <td>{{memberName}}</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
+                  </div>
 
                   <!-- Modal to view members detail-->
-                           <div class="modal-body text-center">
+                           <div id="membersApp" class="modal-body text-center">
                              <table class="table table-striped text-center">
-                               <tr><td>Position</td><td>{{ member.position }}</td></tr>
-                               <tr><td>Sex</td><td>{{ member.sexAtBirth }}</td></tr>
-                               <tr><td>Address</td><td>{{ member.address }}</td></tr>
-                               <tr><td>Phone</td><td>{{ member.workPhone }}</td></tr>
-                               <tr><td>Radio Number</td><td>{{ member.radioNumber }}</td></tr>
-                               <tr><td>Station Number</td><td>{{ member.stationNumber }}</td></tr>
-                               <tr><td>Status</td><td>{{ member.isActive }}</td></tr>
-                               <tr><td>Birthdate</td><td>{{ member.dob }}</td></tr>
-                               <tr><td>Start Date</td><td>{{ member.startDate }}</td></tr>
-                               <tr><td>Email</td><td>{{ member.emailAddress }}</td></tr>
-                               <tr><td>Certification</td><td>
+                               <td>{{memberName}}</td>
                                  <ul>
-                                   <li>{{ c.certificationName }} | {{ c.renewedDate }}</li>
                                  </ul>
                              </table>
                            </div>
